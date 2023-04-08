@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/base.css">
+</head>
+
+<body>
+  <div class="d-flex">
+   <%- include('./base/adminSidebar') %>
+
+   <% if (typeof message!== 'undefined'){ %>
+    <%= message %>
+    <% } %>
+
+    <div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Contact</th>
+            <th scope="col">location</th>
+            <th scope="col">image</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <% if(vendor.length> 0){ %>
+            <% for(let i=0; i<vendor.length; i++){ %>
+              <tr>
+                <th scope="row">
+                  <%= i+1 %>
+                </th>
+                <td>
+                  <%= vendor[i].name %>
+                </td>
+                <td>
+                  <%= vendor[i].email %>,<%= vendor[i].phone %>
+                </td>
+                <td>
+                  <%= vendor[i].location %>
+                </td>
+                <td>
+                  <img src="/static/vendorImage/<%=vendor[i].image %>" alt="" width="100px">
+                </td>
+                <td>
+                  <%= vendor[i].price %>
+                </td>
+                <td> <a href="/admin/edit-vendor?id=<%= vendor[i]._id %>">Edit</a><br> <a
+                    href="/admin/delete-vendor?id=<%= vendor[i]._id %>&cat=<%=vendor[i].category %>">Delete</a> </td>
+                </td>
+              </tr>
+              <% } %>
+
+                <% }else{ %>
+                  <h1>unable to fetch data</h1>
+                  <% } %>
+        </tbody>
+      </table>
+
+
+
+    </div>
+
+</body>
+
+</html>

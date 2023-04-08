@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/login.css">
+    <link rel="stylesheet" href="../static/base.css">
+
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <%- include ('base/navigation'); %>
+
+        <% if(typeof user !=='undefined' ) { %>
+            <div class="success">
+                <h3>Login successful</h3>
+            </div>
+
+            <% } else if (typeof message !=="undefined" ) { %>
+                <div class="error">
+                    <h3>
+                        <%= message %>
+                    </h3>
+                </div>
+                <% } %>
+
+
+                    <% if (typeof user !=='undefined' ) {%>
+                        <div id="login-section">
+                            <form action=''>
+                                <div class="logedin form-group">
+                                    Name: <%=user.name%>
+                                </div>
+                                <div class="logedin form-group">
+                                    Email: <%=user.email%>
+
+                                </div>
+                                <div class="logedin form-group">
+                                    Phone: <%=user.phone%>
+
+                                </div>
+                               <button class="login-submit"><a href='/edit-user'>  Edit Profile </a>  </button><br>
+                               <button class="login-submit" onclick="window.location.href='/logout'" > Log out </button>
+                            </form>
+                        </div>
+                        <% } else {%>
+                            <div id="login-section">
+                                <form action="" method="post">
+                                    <div class="form-group">
+                                        <input type="email" name="email" placeholder="Enter Your Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="password" placeholder="Enter Your password">
+                                    </div>
+                                    <button class="login-submit" type="submit">Log In </button>
+                                </form>
+                            </div>
+                            <% } %>
+
+
+</body>
+
+</html>

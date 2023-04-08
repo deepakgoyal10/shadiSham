@@ -1,0 +1,32 @@
+<nav class="navbar">
+    <div class="logo"> ShadiSham</div>
+    <div id="nav-items">
+        <ul>
+            <li class="item"><a href="/">Home</a></li>
+            <li class="item"><a href="#venue-section">Venues</a></li>
+            <li class="item"><a>Vendors</a></li>
+            <li class="item"><a>Photos</a></li>
+            <li class="item"><a href="#client-section">Real Wedding</a></li>
+            <li class="item"><a>Blog</a></li>
+            <li class="item"><a href="/contact-us">Contact Us</a></li>
+        </ul>
+        
+    </div>
+    <% if (typeof user !== 'undefined'){ %>
+
+        <div><button class="login"><a href="/login">
+            <%= user.name %>
+        </a></button>
+    
+
+    <% }else{ %>
+
+    <div><button class="login"><a href="/login">
+        Log In
+    </a></button>
+    <button class="login"><a
+        href="#login-section">
+        Sign In
+    </a></button></div>
+    <% } %>
+</nav>

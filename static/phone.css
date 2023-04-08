@@ -1,0 +1,87 @@
+/* navigation */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#nav-items ul {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+
+}
+
+.login {
+    margin: 0px;
+}
+
+/* home */
+#home form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+#btn-home-search {
+    width: 238px;
+}
+
+/* venue */
+
+.venue {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 4fr));
+    margin: 0px;
+}
+
+.venue-item {
+    margin: 24px 8px;
+}
+
+.venue-item img {
+    width: 384px;
+    height: 258px;
+}
+
+/* login Section */
+#login-section {
+    align-items: center;
+    justify-content: center;
+
+}
+
+.login-set {
+    width: 89vw;
+    height: 130vh;
+    overflow: hidden;
+    border: none;
+    margin: 0px;
+    flex-direction: column;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    height: 73vh;
+
+}
+
+.login-box input {
+    width: 52vw;
+}
+
+.head-line {
+    margin: 15px auto;
+}
+
+.google-login,
+.facebook-login {
+    display: block;
+    margin: 18px auto;
+}

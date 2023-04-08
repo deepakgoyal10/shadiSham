@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* home start here */
+
+#home {
+    display: flex;
+    height: 561px;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+
+
+}
+
+#home::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url(image/image1.jpg)no-repeat center center/cover;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    opacity: 0.92;
+    box-shadow: inset 0px -22px 103px;
+}
+
+#home form {
+    box-shadow: 0px 0px 97px 7px;
+    margin: 10px 0px;
+    /* z-index: -1; */
+}
+
+
+#vendor,
+#city,
+#btn-home-search {
+    border-radius: 3px;
+    padding: 12px;
+    width: 239px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#vendor option,
+#city option{
+
+
+    
+}
+
+
+
+
+#para-home {
+    color: white;
+    margin-bottom: 14px;
+
+}
+
+#btn-home-search {
+    background-color: #ff8e00;
+    border: 2px solid #ff8e00;
+    width: 130px;
+}
+
+/* Client Section */
+#client-section {
+    display: grid;
+    grid-template-rows: 2fr auto;
+    /* justify-items: start; */
+}
+
+.clients {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 4fr));
+    grid-gap: 12px;
+    margin: 10px 30px;
+}
+
+.client-item img {
+    width: 226px;
+    height: 275px;
+    border-radius: 4px;
+}
+
+.client-item p {
+    width: 230px;
+    color: rgb(92, 92, 92);
+}
+
+.client-item {
+    cursor: pointer;
+}
+
+.client-item h2 {
+    margin-bottom: 6px;
+    color: #000000;
+    font-size: 1.4rem;
+
+}
+
+.client-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px;
+    transition: 0.2s ease-in-out;
+
+}
+
+
+
+/* Venue selection */
+#venue-section {
+    display: grid;
+    grid-template-rows: 2fr auto;
+    margin: 56px 1px;
+}
+
+.venue-item img {
+    width: 492px;
+    height: 336px;
+}
+
+.venue {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(482px, 4fr));
+    margin: 0px 11px;
+
+}
+
+.venue-item {
+    display: flex;
+    margin: 24px 18px;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.venue-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px;
+    transition: 0.2s ease-in-out;
+
+
+}
+
+.venue-item h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+}
+
+
+/* login section */
+
+
+#login-section {
+    display: flex;
+    justify-content: center;
+
+    
+}
+.login-set{
+    display: flex;
+    justify-content: center;
+    border: 47px solid #ff9919;
+    border-bottom: 30px solid #ff9919;
+    width: 66vw;
+    box-shadow: 0px 0px 9px;
+    margin: 26px 0px;
+
+
+}
+.login-set:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+
+
+}
+
+#login-section img {
+    /* grid-area: login-image; */
+    /* box-shadow: 0px 0px 9px; */
+
+}
+
+.login-box {
+    /* box-shadow: 0px 0px 9px; */
+    /* grid-area: login-box; */
+    width: 580px;
+    /* border: 2px solid black; */
+    background-color: rgb(245 245 245);
+
+}
+.login-box input{
+    display: block;
+    width: 415px;
+    padding: 13px 6px;
+    font-size: 1.1rem;
+    margin: 13px auto;
+    border-radius: 5px;
+    border: 1.5px solid #4e4e4e;
+    background-color: #f7f7f7;
+}
+.login-box input:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 7px;
+    transition: 0.2s ease-in-out;
+}
+.login-submit{
+    display: block;
+    background-color: #ff8e00;
+    border: 2px solid #ff8e00;
+    width: 130px;
+    margin: auto;
+    border-radius: 3px;
+    padding: 12px;
+    width: 200px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.login-submit:hover{
+    background-color: rgb(255, 255, 255);
+    border: 1.5px solid #ff8e00;
+    color: #ff8e00;
+    transform: scale(1.1);
+    transition: 0.1s ease-in-out;
+    box-shadow: 0px 0px 8px ;
+}
+
+.google-login, .facebook-login{
+    /* background-color: #ffffff; */
+    border: 1.5px solid #000000;
+    width: 130px;
+    margin: 18px 40px;
+    border-radius: 3px;
+    padding: 12px;
+    width: 200px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* utilitis */
+.h-primary {
+    color: aliceblue;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+    text-shadow: -3px -1px 18px #000000;
+    z-index: 1;
+
+
+
+}
+
+.h-secondary {
+    color: aliceblue;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    z-index: 1;
+
+
+
+}
+
+.head-line {
+
+    margin: 15px 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.1rem;
+    margin-top: 90px;
+}
+
+.head-line::first-letter {
+    font-family: 'Raleway', sans-serif;
+
+    font-size: 2.4rem;
+}
